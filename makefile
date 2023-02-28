@@ -1,4 +1,5 @@
-all: main.c
+all: geometry.c
 
-	gcc -Wall -o main main.c
+	gcc -Wall -o geometry geometry.c
 
+	./geometry
