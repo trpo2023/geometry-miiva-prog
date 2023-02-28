@@ -13,8 +13,8 @@ void circle(float num)
     C = 2.0 * 3.14 * num;
     S = 3.14 * num * num;
 
-    printf("C -> %.2f\n",C);
-    printf("S -> %.2f\n",S);
+    printf("perimeter = %.2f\n",C);
+    printf("area = %.2f\n",S);
 }
 
 int degree(int x,int y)
