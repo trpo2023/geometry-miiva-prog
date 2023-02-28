@@ -17,7 +17,7 @@ void circle(float num)
     printf("S -> %.2f\n",S);
 }
 
-int step(int x,int y)
+int degree(int x,int y)
 {
     int result = 1;
 
@@ -108,7 +108,7 @@ int main()
                 }else{
                     y = arr[whil_1 + 2];
                 }
-                p.x += (x - 48) * step(10,counter_2 - 1) + (y - 48) / 10.0;
+                p.x += (x - 48) * degree(10,counter_2 - 1) + (y - 48) / 10.0;
                 counter_2--;
             }
         }
@@ -122,7 +122,7 @@ int main()
                 }else{
                     y = arr[whil_2 + 2];
                 }
-                p.y += (x - 48) * step(10,counter_3 - 1) + (y - 48) / 10.0;
+                p.y += (x - 48) * degree(10,counter_3 - 1) + (y - 48) / 10.0;
                 counter_3--;
             }
         }
@@ -136,7 +136,7 @@ int main()
                 }else{
                     y = arr[whil_3 + 2];
                 }
-                p.number += (x - 48) * step(10,counter_4 - 1) + (y - 48) / 10.0;
+                p.number += (x - 48) * degree(10,counter_4 - 1) + (y - 48) / 10.0;
 
                 counter_4--;
             }
@@ -217,7 +217,7 @@ int main()
                     }else{
                         y = arr_2[whil_1 + 2];
                     }
-                    p_2.x += (x - 48) * step(10,counter_2 - 1) + (y - 48) / 10.0;
+                    p_2.x += (x - 48) * degree(10,counter_2 - 1) + (y - 48) / 10.0;
                     counter_2--;
                 }
             }
@@ -231,7 +231,7 @@ int main()
                     }else{
                         y = arr_2[whil_2 + 2];
                     }
-                    p_2.y += (x - 48) * step(10,counter_3 - 1) + (y - 48) / 10.0;
+                    p_2.y += (x - 48) * degree(10,counter_3 - 1) + (y - 48) / 10.0;
                     counter_3--;
                 }
             }
@@ -245,7 +245,7 @@ int main()
                     }else{
                         y = arr_2[whil_3 + 2];
                     }
-                    p_2.number += (x - 48) * step(10,counter_4 - 1) + (y - 48) / 10.0;
+                    p_2.number += (x - 48) * degree(10,counter_4 - 1) + (y - 48) / 10.0;
                     counter_4--;
                 }
             }
@@ -341,7 +341,7 @@ int main()
                     }else{
                         y = arr_3[whil_1 + 2];
                     }
-                    p_3.x += (x - 48) * step(10,counter_2 - 1) + (y - 48) / 10.0;
+                    p_3.x += (x - 48) * degree(10,counter_2 - 1) + (y - 48) / 10.0;
                     counter_2--;
                 }
             }
@@ -355,7 +355,7 @@ int main()
                     }else{
                         y = arr_3[whil_2 + 2];
                     }
-                    p_3.y += (x - 48) * step(10,counter_3 - 1) + (y - 48) / 10.0;
+                    p_3.y += (x - 48) * degree(10,counter_3 - 1) + (y - 48) / 10.0;
                     counter_3--;
                 }
             }
@@ -369,7 +369,7 @@ int main()
                     }else{
                         y = arr[whil_3 + 2];
                     }
-                    p_3.number += (x - 48) * step(10,counter_4 - 1) + (y - 48) / 10.0;
+                    p_3.number += (x - 48) * degree(10,counter_4 - 1) + (y - 48) / 10.0;
                     counter_4--;
                 }
             }
