@@ -31,7 +31,7 @@ int degree(int x,int y)
 int main()
 {
     int count = 0,counter = 0,counter_2 = 0,counter_3 = 0,counter_4 = 0,counter_5 = 0,counter_6 = 0;
-    int whil_1 = 0,whil_2 = 0,whil_3 = 0,test,test_2;
+    int whil_1 = 0,whil_2 = 0,whil_3 = 0,test,test_2,test_3;
     char arr[100],arr_2[100],arr_3[100],fill;
     float p2_pX,p3_p2X,p3_pX;
     float p2_pY,p3_p2Y,p3_pY;
@@ -44,15 +44,17 @@ int main()
         count++;
     }
 
-    for(int n = 0;n < count;n++){
+    for(int n = 0;n < count / 2;n++){
         if(arr[n] == ')'){
             counter_5++;
             test = n + 1;
         }
+    }
 
+    for(int n = count / 2;n < count;n++){
         if(arr[n] == '('){
             counter_6++;
-            test = n + 1;
+            test_3 = n + 1;
         }
     }
 
@@ -60,10 +62,10 @@ int main()
 
     if(arr[0] != 'c' || arr[1] != 'i' || arr[2] != 'r' || arr[3] != 'c' || arr[4] != 'l' || arr[5] != 'e' || test_2 < 40 || test_2 > 41){
         printf("Error at column 0: expected 'circle'\n");
-    }else if(counter_5 > 1){
+    }else if(counter_5 > 0){
         printf("Error at column %d: expected ')'\n",test);
-    }else if(counter_6 > 1){
-        printf("Error at column %d: expected '('\n",test);
+    }else if(counter_6 > 0){
+        printf("Error at column %d: expected '('\n",test_3);
     }else if(arr[count - 1] != ')' || (arr[count - 2] == ')' && arr[count - 1] != ' ')){
         printf("Error at column %d: unexpected token\n",count);
     }else{
@@ -137,7 +139,6 @@ int main()
                     y = arr[whil_3 + 2];
                 }
                 p.number += (x - 48) * degree(10,counter_4 - 1) + (y - 48) / 10.0;
-
                 counter_4--;
             }
         }
@@ -146,22 +147,24 @@ int main()
         printf("\n");
     
         count = counter = counter_2 = counter_3 = counter_4 = counter_5 = counter_6 = 0;
-        whil_1 = whil_2 = whil_3 = test = test_2 = 0;
+        whil_1 = whil_2 = whil_3 = test = test_2 = test_3 = 0;
 
         while((fill = getchar()) != '\n'){
             arr_2[count] = fill;
             count++;
         }
 
-        for(int n = 0;n < count;n++){
+        for(int n = 0;n < count / 2;n++){
             if(arr_2[n] == ')'){
                 counter_5++;
                 test = n + 1;
             }
+        }
 
+        for(int n = count / 2;n < count;n++){
             if(arr_2[n] == '('){
                 counter_6++;
-                test = n + 1;
+                test_3 = n + 1;
             }
         }
 
@@ -169,11 +172,11 @@ int main()
 
         if(arr_2[0] != 'c' || arr_2[1] != 'i' || arr_2[2] != 'r' || arr_2[3] != 'c' || arr_2[4] != 'l' || arr_2[5] != 'e' || test_2 < 40 || test_2 > 41){
             printf("Error at column 0: expected 'circle'\n");
-        }else if(counter_5 > 1){
+        }else if(counter_5 > 0){
             printf("Error at column %d: expected ')'\n",test);
-        }else if(counter_6 > 1){
-            printf("Error at column %d: expected '('\n",test);
-        }else if(arr_2[count - 1] != ')' || (arr[count - 2] == ')' && arr[count - 1] != ' ')){
+        }else if(counter_6 > 0){
+            printf("Error at column %d: expected '('\n",test_3);
+        }else if(arr_2[count - 1] != ')' || (arr_2[count - 2] == ')' && arr_2[count - 1] != ' ')){
             printf("Error at column %d: unexpected token\n",count);
         }else{
             while(arr_2[counter] != '.'){
@@ -270,22 +273,24 @@ int main()
                 printf("1. circle\n\n");
 
         count = counter = counter_2 = counter_3 = counter_4 = counter_5 = counter_6 = 0;
-        whil_1 = whil_2 = whil_3 = test = test_2 = 0;   
+        whil_1 = whil_2 = whil_3 = test = test_2 = test_3 = 0;   
 
         while((fill = getchar()) != '\n'){
             arr_3[count] = fill;
             count++;
         }
 
-        for(int n = 0;n < count;n++){
+        for(int n = 0;n < count / 2;n++){
             if(arr_3[n] == ')'){
                 counter_5++;
                 test = n + 1;
             }
+        }
 
+        for(int n = count / 2;n < count;n++){
             if(arr_3[n] == '('){
                 counter_6++;
-                test = n + 1;
+                test_3 = n + 1;
             }
         }
 
@@ -293,11 +298,11 @@ int main()
 
         if(arr_3[0] != 'c' || arr_3[1] != 'i' || arr_3[2] != 'r' || arr_3[3] != 'c' || arr_3[4] != 'l' || arr_3[5] != 'e' || test_2 < 40 || test_2 > 41){
             printf("Error at column 0: expected 'circle'\n");
-        }else if(counter_5 > 1){
+        }else if(counter_5 > 0){
             printf("Error at column %d: expected ')'\n",test);
-        }else if(counter_6 > 1){
-            printf("Error at column %d: expected '('\n",test);
-        }else if(arr_3[count - 1] != ')' || (arr[count - 2] == ')' && arr[count - 1] != ' ')){
+        }else if(counter_6 > 0){
+            printf("Error at column %d: expected '('\n",test_3);
+        }else if(arr_3[count - 1] != ')' || (arr_3[count - 2] == ')' && arr_3[count - 1] != ' ')){
             printf("Error at column %d: unexpected token\n",count);
         }else{
             while(arr_3[counter] != '.'){
