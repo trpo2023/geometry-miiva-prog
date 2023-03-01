@@ -30,7 +30,7 @@ int degree(int x,int y)
 
 int main()
 {
-    int count = 0,counter = 0,counter_2 = 0,counter_3 = 0,counter_4 = 0,counter_5 = 0,counter_6 = 0;
+    int count = 0,counter = 0,counter_2 = 0,counter_3 = 0  ,counter_4 = 0,counter_5 = 0,counter_6 = 0;
     int whil_1 = 0,whil_2 = 0,whil_3 = 0,test,test_2,test_3;
     char arr[100],arr_2[100],arr_3[100],fill;
     float p2_pX,p3_p2X,p3_pX;

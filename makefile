@@ -1,7 +1,10 @@
-all: geometry.c
+all:geometry
 
-	gcc -Wall -o geometry geometry.c
+geometry:geometry.c
+	gcc -Wall -Werror -o geometry geometry.c
 
+run:
 	./geometry
 
+clean:
 	rm geometry
